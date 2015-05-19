@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Ninject;
+using ShopRounding3rd.Domain.Interfaces;
+using ShopRounding3rd.Domain.Entities;
+using Moq;
+using ShopRounding3rd.Domain.Concrete;
 
 namespace ShopRounding3rd.Web.Infrastructure
 {
@@ -35,6 +39,7 @@ namespace ShopRounding3rd.Web.Infrastructure
         private void AddBindings()
         {
             // put bindings in here
+            _kernel.Bind<IProductsRepository>().To<EFProductRepository>();
         }
     }
 }
