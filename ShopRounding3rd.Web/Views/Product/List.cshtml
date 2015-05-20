@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ShopRounding3rd.Domain.Entities.Product>
+﻿@model ShopRounding3rd.Web.Models.ProductsListViewModel
 
 @{
     ViewBag.Title = "Products";
@@ -6,7 +6,7 @@
 
 <h2>Products</h2>
 
-@foreach (var item in Model)
+@foreach (var item in Model.Products)
 {
     <div>
         <h3>@item.Name</h3>
@@ -15,3 +15,6 @@
     </div>
 }
 
+<div>
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new {page = x}))
+</div>
