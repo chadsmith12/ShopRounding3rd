@@ -34,9 +34,10 @@ namespace ShopRounding3rd.Web.Controllers
                     {
                         CurrentPage = page,
                         ItemsPerPage = PageSize,
-                        TotalItems = _productRepo.Products.Count()
+                        TotalItems = category == null ? _productRepo.Products.Count() : _productRepo.Products.Count(e => e.Category == category)
                     },
-                    CurrentCategory = category
+                    CurrentCategory = category,
+                    
             };
 
             return View(model);

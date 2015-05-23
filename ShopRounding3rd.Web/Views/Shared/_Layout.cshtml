@@ -14,7 +14,9 @@
     </div>
     <div class="row panel">
         <div id="categories" class="col-xs-3">
-            List All the Categories Her...
+            <div class="well">
+                @Html.Action("Menu", "Nav")
+            </div>
         </div>
         <div class="col-xs-8">
             @RenderBody()
