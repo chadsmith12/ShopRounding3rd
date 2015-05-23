@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using ShopRounding3rd.Domain.Entities;
 
 namespace ShopRounding3rd.Web
 {
@@ -13,6 +15,7 @@ namespace ShopRounding3rd.Web
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
         }
     }
 }

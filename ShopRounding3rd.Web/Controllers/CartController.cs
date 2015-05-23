@@ -45,6 +45,7 @@ namespace ShopRounding3rd.Web.Controllers
             return RedirectToAction("ViewCart","Cart", new {returnUrl});
         }
 
+        [HttpPost]
         public RedirectToRouteResult RemoveFromCart(int productId, string returnUrl)
         {
             Product product = _productsRepository.Products.FirstOrDefault(p => p.ProductId == productId);
@@ -56,6 +57,12 @@ namespace ShopRounding3rd.Web.Controllers
             }
 
             return RedirectToAction("ViewCart","Cart", new { returnUrl});
+        }
+
+        public PartialViewResult Summary()
+        {
+            var cart = GetCart();
+            return PartialView("_Summary", cart);
         }
         #endregion
 

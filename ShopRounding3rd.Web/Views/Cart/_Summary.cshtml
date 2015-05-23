@@ -1,0 +1,20 @@
+﻿@using System.Data.Entity.Migrations.Infrastructure
+@model ShopRounding3rd.Domain.Entities.Cart
+
+@{
+    var disabled = "";
+}
+
+<div class="navbar-right">
+    @if (Model.ShoppingCart.Any())
+    {
+        @Html.ActionLink("Checkout", "ViewCart", "Cart", new {returnUrl = Request.Url.PathAndQuery}, new {@class = "btn btn-default navbar-btn"})
+    }
+    
+</div>
+
+<div class="navbar-text navbar-right">
+    <b>Your Cart: </b>
+    @Model.ShoppingCart.Sum(x => x.Quantity) item(s),
+    @Model.Total.ToString("c")
+</div>
