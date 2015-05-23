@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopRounding3rd.Domain", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopRounding3rd.Web", "ShopRounding3rd.Web\ShopRounding3rd.Web.csproj", "{871587FC-BC4E-4A05-BFA9-C96C3E5CE3AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopRounding3rd.Tests", "ShopRounding3rd.Tests\ShopRounding3rd.Tests.csproj", "{C0A84D1C-B160-46B7-A25D-28DE55AD95B9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{871587FC-BC4E-4A05-BFA9-C96C3E5CE3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{871587FC-BC4E-4A05-BFA9-C96C3E5CE3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{871587FC-BC4E-4A05-BFA9-C96C3E5CE3AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0A84D1C-B160-46B7-A25D-28DE55AD95B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0A84D1C-B160-46B7-A25D-28DE55AD95B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0A84D1C-B160-46B7-A25D-28DE55AD95B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0A84D1C-B160-46B7-A25D-28DE55AD95B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

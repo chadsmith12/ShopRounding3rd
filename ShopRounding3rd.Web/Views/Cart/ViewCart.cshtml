@@ -1,0 +1,42 @@
+﻿@model ShopRounding3rd.Web.Models.CartIndexViewModel
+
+@{
+    ViewBag.Title = "Shop Rounding 3rd: Shopping Cart";
+}
+
+<h2>Your Cart</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Quantity</th>
+        <th>Item</th>
+        <th class="text-right">Price</th>
+        <th class="text-right">Subtotal</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    @foreach (var item in Model.Cart.ShoppingCart)
+    {
+        <tr>
+            <td class="text-center">@item.Quantity</td>
+            <td class="text-left">@item.Product.Name</td>
+            <td class="text-right">@item.Product.Price.ToString("c")</td>
+            <td class="text-right">@((item.Quantity*item.Product.Price).ToString("c"))</td>
+        </tr>
+    }
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td colspan="3" class="text-right"><h4>Total:</h4></td>
+        <td class="text-right">
+            <h4><span class="label label-success">@Model.Cart.Total.ToString("c")</span></h4></td>
+    </tr>
+    </tfoot>
+</table>
+
+<div class="text-center">
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
+</div>
